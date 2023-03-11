@@ -56,6 +56,10 @@ abbr {
     color: #79BEEE;
 }
 
+label {
+    margin-bottom: 2px;
+}
+
 form {
     display: flex;
     align-items: flex-start;
