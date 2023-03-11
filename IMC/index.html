@@ -8,30 +8,27 @@
     <title>+ Saúde</title>
 </head>
 <body>
-    <div id="espaco">
-        <h1>+ Saúde</h1>
-        <div>
-            
+    <main id="espaco">
+        <h1 >+ Saúde</h1>
                 <h2>Índice de Massa Corporal</h2>
                 <p>Nós <strong>Mais Sáude</strong> queremos o seu melhor! Aqui você poder ver o seu <strong><abbr title="Índice de Massa Corporal">IMC</abbr></strong></p>
             <form action="">
                 <label for="nome:">Nome:</label>
-                <input type="text" name="nome" id="nome" required>
+                <input type="text" name="nome" id="nome" placeholder="Primeiro nome"required>
                 <label for="peso:">Peso:</label>
-                <input type="number" name="altura" id="peso" required>
+                <input type="number" name="altura" id="peso"  placeholder="50"required>
                 <label for="peso:">Altura:</label>
-                <input type="number" name="altura" step="any" id="altura"  placeholder="Altura em metros exemplo: 1.70" required>
+                <input type="number" name="altura" step="any" id="altura"  placeholder="Altura em metros ex: 1.70" required>
                 
                 <input type="button" value="enviar" onclick="IMC()" id="boto">
             </form>
-         </div>
 
-        <div>
-            <p id="res">Agradecemos a preferencia!</p>
-        </div>
+            <div>
+                <p id="res">Agradecemos a preferencia!</p>
+            </div>
 
         
-    </div>
+    </main>
      
     <script>
        
@@ -44,17 +41,17 @@
             let nome = document.getElementById('nome').value
 
             if (imc < 18.5) { //baixo do peso
-                res.innerHTML = `${nome}, Sua classificação é Baixo, risco de Comborbidade: Baixo. O seu resultado: ${imc}`
-            } else if (imc >= 18.5 || imc <= 24.9) { //normal
-                res.innerHTML = `${nome}, Sua classificação é Normal, risco de Comborbidade: Normal. O seu resultado: ${imc}`
-            } else if (imc >= 25 || imc <= 29.9) { //sobrepeso
-                res.innerHTML = `${nome}, Sua classificação é Sobrepeso, risco de Comborbidade é Aumentado. O seu resultado: ${imc}`
-            } else if (imc >= 30 || imc <= 34.9){ //obesidade
-                res.innerHTML = `${nome}, Sua classificação é Obesidade, risco de Comborbidade: Moderado. O seu resultado: ${imc}`
-            } else if (imc >= 35 || imc <= 39.9) { //grave
-                res.innerHTML = `${nome}, Sua classificação é Obesidade Móbida, risco de Comborbidade é Grave. O seu resultado: ${imc}`
+                res.innerHTML = `${nome}. Classificação: <span style="color: rgb(255, 230, 0); font-weight: bold;">Baixo</span> | Comborbidade: <sapn style="color: rgb(255, 230, 0); font-weight: bold;">Baixo</sapn>. O seu IMC: ${imc}`
+            } else if (imc >= 18.5 && imc <= 24.9) { //normal
+                res.innerHTML = `<strong>${nome}</strong>. Classificação: <span style="color: green; font-weight: bold;">Normal</span> | Comborbidade: <span style="color: green; font-weight: bold;">Normal</span> | O seu IMC: ${imc}`
+             } else if (imc >= 25 && imc <= 29.9) { //sobrepeso
+                res.innerHTML = `${nome}. Classificação: <span style="color: rgb(255, 230, 0); font-weight: bold;">Sobrepeso</span> | Comborbidade: <span style="color: rgb(255, 230, 0); font-weight: bold;">Aumentado</span>. O seu IMC: ${imc}`
+            } else if (imc >= 30 && imc <= 34.9){ //obesidade
+                res.innerHTML = `<strong>${nome}</strong>. Classificação: <span style="color: brown; font-weight: bold;">Obesidade</span> | Comborbidade: <span style="color: brown; font-weight: bold;">Moderado</span>. O seu IMC: ${imc}`
+            } else if (imc >= 35 && imc <= 39.9) { //grave
+                res.innerHTML = `<strong>${nome}.</strong>  Classificação:<span style="color: brown; font-weight: bold;">Obesidade Móbida</span> | Comborbidade: <span style="color: brown; font-weight: bold;">Grave</span>. O seu IMC: ${imc}`
             } else {
-                res.innerHTML = `${nome}, Sua classificação é Obesidade Móbida, risco de Comborbidade é Muito Grave. O seu resultado: ${imc}`
+                res.innerHTML = `<strong>${nome}.</strong> Classificação: <span style="color: brown; font-weight: bold;">Obesidade Móbida</span> | Comborbidade: <span style="color: brown; font-weight: bold;">Muito Grave</span>. O seu IMC: ${imc}`
             }
 
             

@@ -8,37 +8,47 @@
 }
 
 body {
-    background-color: #79bdeec7;
-
+    background-color: #79BEEE;
+    background-image: linear-gradient(to top, #80e97960 20%, #b1fe7667 30%,#ADF5FF 50%);
+    height: 100vh;
+    position: relative;
 }
 
-h1 { 
-    text-align: center;
-    height: 500px;
-    width: 100px;
-    background-color: #8A84E2;
-    color: white;
-    text-shadow: 1px 1px 2px #55556b;
+main { 
+    background-color: white;
+    
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.281);
+
+    min-width: 300px;
+    max-width: 600px;
+
+    min-height: 300px;
+    max-height: 600px;
+
     position: absolute;
     
-}
-
-h2 { 
-    display: inline-block;
-    position: relative;
     
-    font-size: 2em;
-   
-
-    padding-left: 112px;
-    padding-top: 20px;
-  
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-p { 
-    font-size: 1.1em;
-    padding: 20px 0px 25px 112px;
-      
+h1 {
+    background-color: #57def0;
+    text-align: center;
+    border-top-right-radius: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.322);
+}
+
+h2 {
+    padding: 10px 0px 10px 7px;
+}
+
+p {
+    padding: 0px 7px 7px 7px;
+    
 }
 
 abbr {
@@ -46,77 +56,22 @@ abbr {
     color: #79BEEE;
 }
 
-input { 
-    width: 200px;
-    border-radius: 5px;
-    border: 1px solid #55556b;
-    padding: 1px;
-
-    margin-top:10px;
-    
-    
-
-}
-
-label {
-    padding-left: 10px;
-    position: relative;
-    font-weight: bolder;
-}
-
 form {
-    display: inline-block;
-    position: absolute;
-    width: 290px;
-    height: 100px;
-    
-    top: 180px;
-    left: 2px;
-    margin-left: 100px;
-    
-}
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    flex-direction: column;
 
-#nome {
-    margin-left: 5px;
+    margin-left: 8px;
 }
-
-#peso {
-    margin-left: 18.5px;
-    margin-top: 5px;
-}
-
-#altura {
-    margin-left: 5px;
-}
-
 
 #boto {
-    width: 100px;
-    border-color: #55556b49;
-    padding: 3px;
-    margin-left: 100px;
-    margin-top: 20px;
-}
-
-#espaco {
-    background-color: white;
-    
-    display: inline-block;
-    width: 650px;
-    height: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-   
-    
-
-    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.315);
-    border-radius: 10px;
+    width: 80px;
+    padding: 1px;
+    margin-top: 10px;
+    margin-left: 4px;
 }
 
 #res {
-    position: absolute;
-    bottom: 50px;
-    
+    margin-top: 5px;
 }
