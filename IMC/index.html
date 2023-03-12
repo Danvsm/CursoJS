@@ -13,15 +13,17 @@
         <h1 >+ Saúde</h1>
                 <h2>Índice de Massa Corporal</h2>
                 <p>Nós <strong>Mais Sáude</strong> queremos o seu melhor! Aqui você poder ver o seu <strong><abbr title="Índice de Massa Corporal">IMC</abbr></strong></p>
-            <form action="">
+            <form onsubmit="event.preventDefault(); IMC();">
                 <label for="nome:">Nome:</label>
-                <input type="text" name="nome" id="nome" placeholder="Primeiro nome"required>
+                <input type="text" name="nome" id="nome" placeholder="Primeiro nome" required>
+                
                 <label for="peso:">Peso:</label>
-                <input type="number" name="altura" id="peso"  placeholder="50"required>
+                <input type="number" name="altura" id="peso"  placeholder="50" required>
+                
                 <label for="peso:">Altura:</label>
                 <input type="number" name="altura" step="any" id="altura"  placeholder="Altura em metros ex: 1.70" required>
                 
-                <input type="button" value="enviar" onclick="IMC()" id="boto">
+                <input type="submit" value="enviar" onclick="IMC()" id="boto" >
             </form>
 
             <div>
@@ -41,7 +43,13 @@
             var imc = imc.toFixed(2)
             let nome = document.getElementById('nome').value
 
-            if (imc < 18.5) { //baixo do peso
+            if (!document.getElementById('peso').validity.valid || !document.getElementById('altura').validity.valid || !document.getElementById('nome').validity.valid) {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+             return;
+            }
+
+
+             if (imc < 18.5) { //baixo do peso
                 res.innerHTML = `${nome}. Classificação: <span style="color: rgb(255, 230, 0); font-weight: bold;">Baixo</span> | Comborbidade: <sapn style="color: rgb(255, 230, 0); font-weight: bold;">Baixo</sapn>. O seu IMC: ${imc}`
             } else if (imc >= 18.5 && imc <= 24.9) { //normal
                 res.innerHTML = `<strong>${nome}</strong>. Classificação: <span style="color: green; font-weight: bold;">Normal</span> | Comborbidade: <span style="color: green; font-weight: bold;">Normal</span> | O seu IMC: ${imc}`
