@@ -9,7 +9,7 @@
 
 body {
     background-color: #79BEEE;
-    background-image: linear-gradient(to top, #80e97960 20%, #b1fe7667 30%,#ADF5FF 50%);
+    background-image: linear-gradient(to right, #014872, #A0eacf);
     height: 100vh;
     position: relative;
 }
@@ -35,7 +35,7 @@ main {
 }
 
 h1 {
-    background-color: #57def0;
+    background-color: #014872;
     text-align: center;
     border-top-right-radius: 5px;
     color: white;
@@ -53,7 +53,7 @@ p {
 
 abbr {
     text-decoration: underline;
-    color: #79BEEE;
+    color: #014872;
 }
 
 label {
