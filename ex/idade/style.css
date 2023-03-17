@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    
+    color: white;
+    text-shadow: 1px 0px 10px rgba(0, 0, 0, 0.192);
+}
+p {
+    padding: 5px;
+}
+
+body {
+    background-color:  #2DC7FF;
+    background-image: linear-gradient(to bottom,  #2DC7FF,#00ABE7, #0081AF);
+    height: 100vh;
+    padding: 5px;
+}
+
+section {
+    
+    background-color: white;
+    min-width: 300px;
+    max-width: 500px;
+
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.322);
+}
+
+#boto {
+    padding: 5px 15px;
+    
+    border-radius: 5px;
+    border-color: rgba(207, 207, 207, 0.041);
+
+    background-color: rgb(240, 235, 235);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
+    
+}
+
+#res {
+    padding-top: 5px;
+}
