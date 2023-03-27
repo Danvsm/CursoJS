@@ -13,6 +13,7 @@ h1 {
 }
 
 section {
+    margin: auto;
     background-color: white;
     
     border-radius: 10px;
@@ -24,7 +25,7 @@ section {
     min-height: 400px;
     max-height: 600px;
 
-
+    
 }
 
 p {
